@@ -1,6 +1,9 @@
 # Interpreter
 A basic and my first attempt at making an interpreter which interprets and executes a program line by line
 
+# Presentaion
+![interpreter code](IMG/intepreterPresentation.png "interpreter code")
+
 # Inspirations, Sources and References
  1. https://craftinginterpreters.com/
  2. https://www.youtube.com/playlist?list=PLZQftyCk7_SdoVexSmwy_tBgs7P0b97yD
