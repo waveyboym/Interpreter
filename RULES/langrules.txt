@@ -1,0 +1,189 @@
+LANGUAGE RULES
+
+entry point is ../Source Files/main.cpp. File to run is set as ../Source Files/main.txt
+
+numbers: 'number value = 3;'
+         'number value = 3 * 4 + 2;' etc
+         'number newval = 3;'
+         'number newval *= value;' etc //only variables with 'number' data type can be multiplied together here
+         'number newval = value + value;'
+         '3 * 4;' etc
+         //operations such as *, /, -, ^(pow ,eg a ^ b is a to the power of b), %(modulus), 
+         // -=, +=, /=, ^=, %= are allowed on number data types. They can only be used on variables that
+         // were already declared and had a value assigned to them.
+
+strings: 'word data = "hello world";'
+         'word data = "hello" + "world";'
+         'word newData = "";
+         'word newData += data;' etc //only variables with 'word' data type can be appended together here
+         'word newData = data + data;'
+         '"hello" + "word";' etc
+         //operations such as *, /, -, ^(pow ,eg a ^ b is a to the power of b), %(modulus), 
+         // -=, *=, /=, ^=, %= are not allowed on word data types
+
+booleans: 'number booltype = (3 < 5);' etc
+          'number booltype = (3 < 5 && 5 < 8);' etc
+          'number booltype = ("hello" != "world");' etc
+          'number result = (booltype == booltype);' etc
+          '1 && 1;' etc
+
+//!important! operations such as self assignment like:
+value = value + 1; 
+may throw errors as they are not supported. Either assign to a variable with a different name or use either one of these operators:
+-=, +=, /=, ^=, %=.
+So if value is 1 and an assignment is 'value += 1;', will result in value = 2.
+
+comments: single line comments: //<statement>;
+
+          multi-line comments: /*<statement>;     or  /*<statement>
+                                 <statement>;           <statement>
+                                    .                       .
+                                    .                       .
+                                    .                       .
+                                <nth-statement>;*/     <nth-statement>*/
+
+
+printing to the console: //displayln() and println() both print out data with a newline character at the end
+                         //display() and print() both print out data with no newline at the end
+
+                        eg: display(3 + 4);            eg: displayln(3 + 4);
+                            display(4 + 6);                displayln(4 + 6);
+                            //will display: 710             //will display: 7
+                                                                            10
+                        
+                        you can also display/ print out any of the number or word data type variables
+                        
+                        eg: number booltype = 1;              eg: word text = "wonder;
+                            displayln(booltype == booltype);      displayln(text + " " + text);
+                            //will display: 1                     //will display: wonder wonder
+
+
+
+if-statements: if-statements should always begin with if first. So you can have if-elseif-else or if-elseif-elseif etc
+               but else-elseif or standalone elseif or else is not allowed. For loops and while loops and other if statements
+               can be included within the scope of an if statement
+
+               if-statement format: 'if(<conditional-expression>){
+                                        then <statement 1>
+                                        then <statement 2>
+                                        .
+                                        .
+                                        then <statement n>
+                                        }
+                                    elseif(<conditional-expression>){
+                                        then <statement 1>
+                                        then <statement 2>
+                                        .
+                                        .
+                                        then <statement n>
+                                    }
+                                    .
+                                    .
+                                    elseif(<conditional-expression>){
+                                        then <statement 1>
+                                        then <statement 2>
+                                        .
+                                        .
+                                        then <statement n>
+                                    }
+                                    else{
+                                        then <statement 1>
+                                        then <statement 2>
+                                        .
+                                        .
+                                        then <statement n>
+                                    };'
+
+            examples:
+
+        1.  if(3 + 2 > 4){                                            2.    if("word" == "word"){    
+                then displayln("greater than")                               then displayln("equal words")
+            }                                                               }
+            else if(3 + 2 >= 4){                                            else{
+                then displayln("greater than")                               then displayln("not equal words")
+                then displayln("greater than or equal to")               };
+            }
+            else{
+                then displayln("failed all test cases")
+            };
+
+this is not allowed:    if(3 + 2 > 4){                               should be: if(3 + 2 > 4){
+                            then displayln("greater than")                       then displayln("greater than")    
+                        }                                                       };
+                        if(3 + 2 >= 4){                                         if(3 + 2 >= 4){
+                            then displayln("greater than")                       then displayln("greater than")
+                            then displayln("greater than or equal to")           then displayln("greater than or equal to")
+                        };                                                      };
+
+                        only the first if statement will be read and processed if there is no ';' separating the if statements
+
+while-loops: if statements, for loops and while loops can be included within the scope of a while loop and vice versa
+            
+            structure: while(<condition>){
+                        then <statement 1>
+                        then <statement 2>
+                        then <statement 3>
+                        .
+                        .
+                        .
+                        then <statement n>
+                      };
+
+            examples:
+                        number val = 0;
+
+                        while(val < 3){
+                            then display(val)
+                            then display(" ")
+                            then val += 1
+                        };
+
+                        displayln(val);
+
+for-loops: if statements, while loops and for loops can be included within the scope of a for loop and vice versa
+
+            structure: for(<declaration>:<condition>:<iteration>){
+                        then <statement 1>
+                        then <statement 2>
+                        then <statement 3>
+                        .
+                        .
+                        .
+                        then <statement n>
+                      };
+
+functions: 
+//NOT YET FULLY IMPLEMENTED(will throw an exception)
+
+    definition structure:   function <name>(<data-type> arg1,<data-type> arg2, ...,<data-type> arg5){      
+                                then <statement 1>
+                                then <statement 2>
+                                then <statement 3>
+                                .
+                                .
+                                .
+                                then <statement n>
+                                then return <expr>
+                                return <varaiblename> | <number> | <word> | <another-function>
+                            };
+
+      call structure:   callfunction <name>(arg1,arg2, ...,arg5);
+      or call in if-statement, while-loop, for-loop or function declaration like so:
+                        if(<conditional-expression>){
+                            then <statement n>
+                            then callfunction <name>(arg1,arg2, ...,arg5)
+                            then <statement n>
+                        };
+      
+      or assign a value returned from a function to a variable:
+                        number value = callfunction <name>(arg1,arg2, ...,arg5);
+
+      or use a function in conditional checking
+                        if(callfunction <name>(arg1,arg2, ...,arg5)){
+                            then <statement 1>
+                            then <statement 2>
+                                    .
+                                    .
+                                    .
+                            then <statement n>
+                        };
