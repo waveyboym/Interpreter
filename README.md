@@ -1,7 +1,7 @@
 # Interpreter
 A basic and my first attempt at making an interpreter which interprets and executes a program line by line
 
-# Presentaion
+# Presentation
 ![interpreter code](IMG/intepreterPresentation.png "interpreter code")
 
 # Inspirations, Sources and References
