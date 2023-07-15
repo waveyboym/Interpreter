@@ -2,7 +2,8 @@
 *@file Exceptions.h Exceptions.cpp
 *@class Exceptions
 *@author Michael
-*@brief creates exception objects with a message for the object to display when thrown*/
+*@brief creates exception objects with a message for the object to display when thrown
+*/
 
 #ifndef EXCEPTIONS_H
 #define EXCEPTIONS_H
@@ -15,13 +16,16 @@
 #include <queue>//storing each line of of the program in file
 #include <array>//for easy use of arrays
 
-/** *@brief creates exception objects with a message for the object to display when thrown*/
+/** 
+*@brief creates exception objects with a message for the object to display when thrown
+*/
 class Exceptions{
     public:
         
         /**
         *@brief Exceptions constructor
-        *@param newMessage the message to display when the exception is thrown*/
+        *@param newMessage the message to display when the exception is thrown
+        */
         Exceptions(const std::string& newMessage);
         
         /**
@@ -30,7 +34,8 @@ class Exceptions{
         *@param filePath name of the file where exception was thrown from
         *@param lnNum line where exception was thrown from
         *@param current_index index where exception was thrown from
-        *@param current_char the character which caused an exception to be thrown*/
+        *@param current_char the character which caused an exception to be thrown
+        */
         Exceptions(const int& Error_index, const std::string& filePath, const int& lnNum, const int& current_index,const std::string& current_char);
         
         /**
@@ -40,50 +45,67 @@ class Exceptions{
         *@param lnNum line where exception was thrown from
         *@param current_index index where exception was thrown from
         *@param current_char the character which caused an exception to be thrown
-        *@param number_str if an exeption was caused by a number, the number which caused an exception to be thrown*/
+        *@param number_str if an exeption was caused by a number, the number which caused an exception to be thrown
+        */
         Exceptions(const int& Error_index, const std::string& filePath, const int& lnNum, const int& current_index,const std::string& current_char, const std::string& number_str);
         
         /**
         *@brief gets the message that was created or stored when the exception was created and thrown
         *@param none
-        * @return std::string*/
+        * @return std::string
+        */
         std::string getMessage();
     
     private:
         
-        /** *@brief stores the message to display when exception is thrown*/
+        /** 
+        *@brief stores the message to display when exception is thrown
+        */
         std::string message;
         
-        /** *@brief name of the file where exception was thrown from*/
+        /** 
+        *@brief name of the file where exception was thrown from
+        */
         std::string filePath;
         
-        /** *@brief line where exception was thrown from*/
+        /** 
+        *@brief line where exception was thrown from
+        */
         int lnNum;
         
-        /** *@brief index where exception was thrown from*/
+        /** 
+        *@brief index where exception was thrown from
+        */
         int current_index;
         
-        /** *@brief the character which caused an exception to be thrown*/
+        /** 
+        *@brief the character which caused an exception to be thrown
+        */
         std::string current_char;
         
-        /** *@brief (optional) if an exception was caused by a number, the number which caused an exception to be thrown*/
+        /** 
+        *@brief (optional) if an exception was caused by a number, the number which caused an exception to be thrown
+        */
         std::string number_str;
         
         /**
         *@brief makes empty spaces eg ' ', of a specified length and returns a string with these spaces
         *@param length length of requested space string. A single space is represented by one 
-        *@return std::string*/
+        *@return std::string
+        */
         std::string makeSpaces(const int& length);
         
         /**
-        *@brief determines which error message must be thrown depending on the index passed in which
-        corresponds to the index's in the enum 'EXCEPTIONS_MSG'
+        *@brief determines which error message must be thrown depending on the index passed in which corresponds to the index's in the enum 'EXCEPTIONS_MSG'
         *@param Error_index the index which corresponds to the index's in the enum 'EXCEPTIONS_MSG'
-        *@return std::string*/
+        *@return std::string
+        */
         std::string createErrorMessage(const int& Error_index);
 };
 
-/** *@brief enum that stores error codes for exceptions*/
+/** 
+*@brief enum that stores error codes for exceptions
+*/
 enum EXCEPTIONS_MSG{
     EXPECTED__SECOND_and_symbol_,
     EXPECTED__SECOND_or_symbol_,

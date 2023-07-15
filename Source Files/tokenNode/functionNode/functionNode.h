@@ -1,7 +1,18 @@
+/**
+*@file functionNode.h functionNode.cpp
+*@class functionNode
+*@author Michael
+*@brief creates a node in the syntax tree of type functionNode
+*/
+
 #ifndef FUNCTIONNODE_H
 #define FUNCTIONNODE_H
 #include "../tokenNode.h"
 
+
+/** 
+*@brief creates a node in the syntax tree of type functionNode
+*/
 class functionNode : public tokenNode{
 public:
     const int FUNC_ARG_MAX = 5;
