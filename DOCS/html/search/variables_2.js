@@ -1,9 +1,0 @@
-var searchData=
-[
-  ['condition_0',['condition',['../d5/db1/a00140_a0fc9b0c07ef47e03a8d5f01ccb41ea27.html#a0fc9b0c07ef47e03a8d5f01ccb41ea27',1,'forNode::condition'],['../db/d48/a00148_a26307f58801330cf248505351536f2df.html#a26307f58801330cf248505351536f2df',1,'ifNode::condition'],['../d5/de9/a00176_a34b796c0c981e9fd1a7938d2793726e5.html#a34b796c0c981e9fd1a7938d2793726e5',1,'whileNode::condition']]],
-  ['conditionaltype_1',['conditionaltype',['../d5/db1/a00140_abdbdd8ace2b5ae5e519af24c49bbeacb.html#abdbdd8ace2b5ae5e519af24c49bbeacb',1,'forNode::conditionaltype'],['../db/d48/a00148_a8b8c29de28a470f602b83bcf0a15ced7.html#a8b8c29de28a470f602b83bcf0a15ced7',1,'ifNode::conditionaltype'],['../d5/de9/a00176_a92aac096401d86227448193b447540a4.html#a92aac096401d86227448193b447540a4',1,'whileNode::conditionaltype']]],
-  ['current_5fchar_2',['current_char',['../d0/dc2/a00104_ad75a5853bb675def13bccf12d9566a5c.html#ad75a5853bb675def13bccf12d9566a5c',1,'Exceptions::current_char'],['../da/d72/a00124_add4ae6efc7daef1ef424df38557d1f92.html#add4ae6efc7daef1ef424df38557d1f92',1,'lexer::current_char']]],
-  ['current_5findex_3',['current_index',['../d0/dc2/a00104_ab6e919b04ffe6a36c910d5a6b36b123f.html#ab6e919b04ffe6a36c910d5a6b36b123f',1,'Exceptions::current_index'],['../da/d72/a00124_a160f180418726d300a58a0867f34579f.html#a160f180418726d300a58a0867f34579f',1,'lexer::current_index'],['../d5/deb/a00132_ae49d5d1236ad17c0da02c79896fe551b.html#ae49d5d1236ad17c0da02c79896fe551b',1,'parser::current_index']]],
-  ['current_5fvar_5fname_4',['current_var_name',['../d5/deb/a00132_a6570f00dfd8798a3b80701092a9305e5.html#a6570f00dfd8798a3b80701092a9305e5',1,'parser']]],
-  ['currenttoken_5',['currentToken',['../d5/deb/a00132_a187ca8bb0ec4a27a0015e55defd97ecb.html#a187ca8bb0ec4a27a0015e55defd97ecb',1,'parser']]]
-];
