@@ -21,5 +21,5 @@ A basic and my first attempt at making an interpreter which interprets and execu
  language rules can be found under <a href="https://github.com/waveyboym/Interpreter/blob/main/RULES/langrules.txt">RULES/langrules.txt</a>
 
 # Documentation
-  Access the documentation here:
+  Access the documentation here: <a href="https://waveyboym.github.io/Interpreter/">Live docs</a> \
   Or by accessing this folder: <a href="https://github.com/waveyboym/Interpreter/blob/main/DOCS/">DOCS</a>
